@@ -6,22 +6,24 @@ using namespace std;
 
 int main()
 {
-    Notifikaattori n;
+	Notifikaattori notifikaattori;
 
-    Seuraaja a("A");
-    Seuraaja b("B");
-    Seuraaja c("C");
+	Seuraaja a("A");
+	Seuraaja b("B");
+	Seuraaja c("C");
 
-    n.lisaa(&a);
-    n.lisaa(&b);
-    n.lisaa(&c);
-    n.tulosta();
+	notifikaattori.poista(&a);
 
-    n.postita("Tama on viesti 1");
+	notifikaattori.lisaa(&a);
+	notifikaattori.lisaa(&b);
+	notifikaattori.lisaa(&c);
+	notifikaattori.tulosta();
 
-    n.poista(&b);
+	notifikaattori.postita("Tama on viesti 1");
 
-    n.postita("Tama on viesti 2");
+	notifikaattori.poista(&b);
 
-    return 0;
+	notifikaattori.postita("Tama on viesti 2");
+
+	return 0;
 }

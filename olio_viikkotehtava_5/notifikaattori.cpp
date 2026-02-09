@@ -20,6 +20,7 @@ void Notifikaattori::lisaa(Seuraaja* uusi_seuraaja)
 void Notifikaattori::poista(Seuraaja *poistettava_seuraaja)
 {
     if(seuraajat == nullptr) return;
+		if(poistettava_seuraaja == nullptr) return;
 
     Seuraaja* nykyinen = seuraajat;
 
